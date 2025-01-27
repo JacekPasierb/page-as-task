@@ -12,16 +12,46 @@
   </head>
   <body>
     <section class="header">
-      <div class="header__content container">
-        <a href="/"><span class="logo-overlay">Arthro</span>Hard</a>
-        <div class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__list-item">
-              <a href="">Co nas wyróżnia</a>
-            </li>
-            <li class="navigation__list-item"><a href="">Skład</a></li>
-            <li class="navigation__list-item"><a href="">Produkty</a></li>
-          </ul>
+      <div class="header__menu">
+        <div class="header__content container">
+          <a href="/" class="logo"
+            ><span class="logo-overlay">Arthro</span>Hard</a
+          >
+          <button class="menu__button">
+            <img src="./images/menu.png" alt="menu button" />
+          </button>
+          <div class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__list-item">
+                <a href="">Co nas wyróżnia</a>
+              </li>
+              <li class="navigation__list-item"><a href="">Skład</a></li>
+              <li class="navigation__list-item"><a href="">Produkty</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="header__hero">
+          <picture>
+            <source
+              srcset="./images/header2x.png"
+              media="(min-width: 1200px)"
+            />
+            <img src="./images/header1x.png" alt="hero" />
+          </picture>
+
+          <div class="header__hero-text">
+            <div class="header__hero-logo">
+              <h1 class="logo"><span class="logo-overlay">Arthro</span>Hard</h1>
+            </div>
+            <h2>Lab-V Arthrohard Preparat na wsparcie stawów dla psa i kota</h2>
+            <p>
+              Arthrohard to dobrze przyswajalny suplement diety w formie syropu,
+              stworzony z myślą o zdrowiu stawów Twojego psa lub kota.
+            </p>
+            <button class="header__hero--btn">Kup Teraz</button>
+          </div>
         </div>
       </div>
     </section>
