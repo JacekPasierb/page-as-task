@@ -1,0 +1,48 @@
+/* Reset dla wszystkich elementów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Ustawienia dla tekstu */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header__content {
+  display: flex;
+  flex-direction: row;
+}
+/*Navigation */
+.navigation {
+  display: none;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  /*Navigation */
+  .navigation {
+    display: block;
+  }
+}
