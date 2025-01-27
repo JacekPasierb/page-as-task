@@ -40,11 +40,22 @@
         <div class="header__hero">
           <picture>
             <source
-              srcset="./images/header2x.png"
-              media="(min-width: 1200px)"
+              srcset="
+                ./images/headerDesctop@1x.png 1x,
+                ./images/headerDesctop@2x.png 2x
+              "
+              media="(min-width: 768px)"
             />
-            <img src="./images/header1x.png" alt="hero" />
+            <source
+              srcset="
+                ./images/headerMobile@1x.png 1x,
+                ./images/headerMobile@2x.png 2x
+              "
+              media="(max-width: 767px)"
+            />
+            <img src="./images/headerMobile@1x.png" alt="Opis obrazu" />
           </picture>
+         
 
           <div class="header__hero-text">
             <div class="header__hero-logo">

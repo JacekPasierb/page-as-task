@@ -201,6 +201,9 @@ body {
     align-items: center;
     text-align: left;
   }
+  .header__hero img{
+   width: 100%;
+  }
   .header__hero-logo {
     display: block;
   }
