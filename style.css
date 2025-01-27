@@ -191,7 +191,29 @@ body {
   font-weight: bold;
 }
 
+@media (max-width: 767px) {
+  .header {
+    background-image: url(./images/effectHeaderMobile@1x.png);
+    background-repeat: no-repeat;
+    background-position: bottom 0px left -10px;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .header {
+      background-image: url(./images/effectHeaderMobile@2x.png);
+    }
+  }
+}
 @media (min-width: 768px) {
+  body {
+    background-image: url(./images/effectHeaderDesctop@1x.png), url(./images/effectHeader2Desctop@1x.png), url(./images/effectHeader3Desctop@1x.png);
+    background-repeat: no-repeat;
+    background-position: top 800px left 10px, top 800px right -10px, top 600px right -5px;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+      background-image: url(./images/effectHeaderDesctop@2x.png), url(./images/effectHeader2Desctop@2x.png), url(./images/effectHeader3Desctop@2x.png); /* Obraz dla urządzeń Retina */
+    }
+  }
   .header__menu {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #ffffff;
@@ -200,9 +222,10 @@ body {
     flex-direction: row;
     align-items: center;
     text-align: left;
+    padding-block: 150px;
   }
-  .header__hero img{
-   width: 100%;
+  .header__hero img {
+    width: 100%;
   }
   .header__hero-logo {
     display: block;
