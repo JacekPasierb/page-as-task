@@ -22,7 +22,7 @@
           <a href="#header" class="logo"
             ><span class="logo-overlay">Arthro</span>Hard</a
           >
-          <button class="menu__button">
+          <button class="menu__button" id="toggleModalButton">
             <img src="./images/menu.png" alt="menu button" />
           </button>
           <div class="navigation">
@@ -30,7 +30,9 @@
               <li class="navigation__list-item">
                 <a href="#about">Co nas wyróżnia</a>
               </li>
-              <li class="navigation__list-item"><a href="">Skład</a></li>
+              <li class="navigation__list-item">
+                <a href="#content">Skład</a>
+              </li>
               <li class="navigation__list-item"><a href="">Produkty</a></li>
             </ul>
           </div>
@@ -201,9 +203,80 @@
           </ul>
         </div>
       </section>
+      <section class="effect" id="effect">
+        <div class="container">
+          <div class="effect__content">
+            <div class="section__title">
+              <h2>Działanie Preparatu</h2>
+              <div class="section__title-line"></div>
+            </div>
+            <ul class="effect__list">
+              <li>
+                <div class="number-box"><p>1</p></div>
+                <p>Wsparcie rozwoju chrząstki stawowej</p>
+              </li>
+              <li>
+                <div class="number-box"><p>2</p></div>
+                <p>Działanie chondroprotekcyjne</p>
+              </li>
+              <li>
+                <div class="number-box"><p>3</p></div>
+                <p>Zmniejszenie stanu zapalnego i bólu</p>
+              </li>
+              <li>
+                <div class="number-box"><p>4</p></div>
+                <p>Wzmocnienie stawów</p>
+              </li>
+              <li>
+                <div class="number-box"><p>5</p></div>
+                <p>Ochrona przed mikrourazami</p>
+              </li>
+              <li>
+                <div class="number-box"><p>6</p></div>
+                <p>Regeneracja po urazach i zabiegach ortopedycznych</p>
+              </li>
+              <li>
+                <div class="number-box"><p>7</p></div>
+                <p>Poprawa jakości życia</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="content" id="content">
+        <div class="container">
+          <div class="section__title">
+            <h2>Skład w 5 ml</h2>
+            <div class="section__title-line"></div>
+          </div>
+        </div>
+      </section>
     </main>
+    <!-- Modal (początkowo ukryty) -->
+    <div id="myModal" class="modal">
+      <div class="container">
+        <div class="modal-content">
+          <div class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__list-item">
+                <a href="#effect">Działanie Preparatu</a>
+              </li>
+              <li class="navigation__list-item">
+                <a href="#">Zalecenia</a>
+              </li>
+              <li class="navigation__list-item">
+                <a href="#content">Skład</a>
+              </li>
+              <li class="navigation__list-item"><a href="#">Dawkowanie</a></li>
+              <li class="navigation__list-item"><a href="#">Opinie</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Dodaj odwołanie do zewnętrznego pliku JS -->
     <script src="./js/scrollspy.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
