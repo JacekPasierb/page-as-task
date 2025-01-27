@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 ul {
   list-style: none;
@@ -22,6 +25,9 @@ body {
   background-color: #f6f6f6;
 }
 
+[id] {
+    scroll-margin-top: 200px;
+}
 .container {
   width: 100%;
   max-width: 1200px;
@@ -92,6 +98,13 @@ body {
 
 .header__hero--btn:hover {
   cursor: pointer;
+}
+.header__menu {
+  position: fixed;
+  width: 100%;
+}
+.navigation__list-item a.active {
+    border-bottom: 1px solid black;
 }
 /*About*/
 .section__title {
@@ -205,13 +218,23 @@ body {
 }
 @media (min-width: 768px) {
   body {
-    background-image: url(./images/effectHeaderDesctop@1x.png), url(./images/effectHeader2Desctop@1x.png), url(./images/effectHeader3Desctop@1x.png);
+    background-image: url(./images/effectHeaderDesctop@1x.png),
+      url(./images/effectHeader2Desctop@1x.png),
+      url(./images/effectHeader3Desctop@1x.png);
     background-repeat: no-repeat;
-    background-position: top 800px left 10px, top 800px right -10px, top 600px right -5px;
+    background-position: top 800px left 10px, top 800px right -10px,
+      top 600px right -5px;
   }
+
+  .about__box {
+    margin-inline: 25px;
+  }
+
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     body {
-      background-image: url(./images/effectHeaderDesctop@2x.png), url(./images/effectHeader2Desctop@2x.png), url(./images/effectHeader3Desctop@2x.png); /* Obraz dla urządzeń Retina */
+      background-image: url(./images/effectHeaderDesctop@2x.png),
+        url(./images/effectHeader2Desctop@2x.png),
+        url(./images/effectHeader3Desctop@2x.png); /* Obraz dla urządzeń Retina */
     }
   }
   .header__menu {
@@ -265,11 +288,10 @@ body {
 
   .about__boxes {
     flex-direction: row;
-    gap: 30px;
+
     margin: 0 auto;
     margin-bottom: 120px;
     justify-content: space-evenly;
-    flex-wrap: wrap;
   }
 
   .about__box {
@@ -283,20 +305,20 @@ body {
   }
 
   .about__box h3 {
-    font-size: 31px;
+    font-size: 21px;
   }
   .about__box p {
-    font-size: 20px;
+    font-size: 13px;
   }
 
   .number-box {
     width: 46px;
     height: 46px;
   }
-  /* .about__box-image img {
-    max-width: calc(50% - 10px);
-    height: auto;
+}
 
-    object-fit: cover;
-  } */
+@media (min-width: 840px) {
+  .about__boxes {
+    gap: 100px;
+  }
 }
