@@ -375,7 +375,10 @@ body {
     gap: 100px;
   }
 }
-
+.products {
+  background-color: #f1f1f1;
+ padding-block: 120px;
+}
 /* Styl dla modala */
 .modal {
   display: none; /* Modal jest ukryty domyślnie */
@@ -446,6 +449,7 @@ body {
   max-width: 100%;
 }
 .content__image img {
+    display: block;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -508,8 +512,8 @@ select {
 }
 
 .product {
-  background-color: #BEBEBE;
-  border: 1px solid #BEBEBE;
+  background-color: #bebebe;
+  border: 1px solid #bebebe;
   padding: 10px;
 
   text-align: center;
