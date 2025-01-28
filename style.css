@@ -314,7 +314,7 @@ body {
   /*Navigation */
   .navigation {
     display: block;
-    margin-block: 48px;
+    margin-block: 20px;
   }
 
   .navigation__list {
