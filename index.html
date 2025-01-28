@@ -13,19 +13,23 @@
     />
 
     <link rel="stylesheet" href="/style.css" />
-    <title>Document</title>
+    <title>ARTHROHARD</title>
   </head>
   <body>
-    <section class="header" id="header">
+    <header class="header" id="header">
       <div class="header__menu">
         <div class="header__content container">
-          <a href="#header" class="logo"
-            ><span class="logo-overlay">Arthro</span>Hard</a
+          <a href="#header" class="logo">
+            <span class="logo-overlay">Arthro</span>Hard
+          </a>
+          <button
+            class="menu__button"
+            id="toggleModalButton"
+            aria-label="Otwórz menu"
           >
-          <button class="menu__button" id="toggleModalButton">
             <img src="./images/menu.png" alt="menu button" />
           </button>
-          <div class="navigation">
+          <nav class="navigation" aria-label="Menu główne">
             <ul class="navigation__list">
               <li class="navigation__list-item">
                 <a href="#about">Co nas wyróżnia</a>
@@ -35,7 +39,7 @@
               </li>
               <li class="navigation__list-item"><a href="">Produkty</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
       <div class="container">
@@ -67,11 +71,16 @@
               Arthrohard to dobrze przyswajalny suplement diety w formie syropu,
               stworzony z myślą o zdrowiu stawów Twojego psa lub kota.
             </p>
-            <button class="btn header__hero--btn">Kup Teraz</button>
+            <button
+              class="btn header__hero--btn"
+              aria-label="Kup teraz ArthroHard"
+            >
+              Kup Teraz
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </header>
     <main>
       <section class="about" id="about">
         <div class="container">
@@ -287,11 +296,10 @@
         </div>
       </section>
     </main>
-    <!-- Modal (początkowo ukryty) -->
     <div id="myModal" class="modal">
       <div class="container">
         <div class="modal-content">
-          <div class="navigation">
+          <nav class="navigation" aria-label="Menu mobilne">
             <ul class="navigation__list">
               <li class="navigation__list-item">
                 <a href="#effect">Działanie Preparatu</a>
@@ -305,12 +313,10 @@
               <li class="navigation__list-item"><a href="#">Dawkowanie</a></li>
               <li class="navigation__list-item"><a href="#">Opinie</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
     </div>
-
-    <!-- Dodaj odwołanie do zewnętrznego pliku JS -->
 
     <script src="./js/products.js"></script>
     <script src="./js/content.js"></script>

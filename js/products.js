@@ -5,7 +5,6 @@ let currentPage = 1;
 const apiUrl = "https://brandstestowy.smallhost.pl/api/random";
 let isLoading = false;
 
-// Fetch products from API
 async function fetchProducts(pageNumber, pageSize) {
   try {
     const response = await fetch(
@@ -16,15 +15,13 @@ async function fetchProducts(pageNumber, pageSize) {
       return [];
     }
     const data = await response.json();
-    console.log("API Response:", data); // Debugging: log the response
-    return Array.isArray(data) ? data : data.data || []; // Adjust to match actual API structure
+    return Array.isArray(data) ? data : data.data || [];
   } catch (error) {
     console.error("Error fetching products:", error);
     return [];
   }
 }
 
-// Generate a single product
 function createProduct(product) {
   const productElement = document.createElement("div");
   productElement.classList.add("product");
@@ -32,9 +29,8 @@ function createProduct(product) {
   return productElement;
 }
 
-// Load products from API and render them
 async function loadProducts(pageNumber, pageSize) {
-  if (isLoading) return; // Prevent multiple calls
+  if (isLoading) return;
   isLoading = true;
   const products = await fetchProducts(pageNumber, pageSize);
   if (!Array.isArray(products)) {
@@ -47,7 +43,6 @@ async function loadProducts(pageNumber, pageSize) {
   isLoading = false;
 }
 
-// Handle select change event
 productCountSelect.addEventListener("change", () => {
   currentCount = parseInt(productCountSelect.value, 10);
   productContainer.innerHTML = "";
@@ -55,15 +50,11 @@ productCountSelect.addEventListener("change", () => {
   loadProducts(currentPage, currentCount);
 });
 
-// Infinite scroll functionality
 window.addEventListener("scroll", () => {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
-    // Add offset for better UX
-    console.log("Loading more products...");
     currentPage++;
     loadProducts(currentPage, currentCount);
   }
 });
 
-// Initial load
 loadProducts(currentPage, currentCount);
