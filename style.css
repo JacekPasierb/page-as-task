@@ -89,7 +89,7 @@ body {
   margin-bottom: 85px;
 }
 
-.header__hero--btn {
+.btn {
   display: none;
   padding: 10px 40px;
   margin-top: 20px;
@@ -98,11 +98,18 @@ body {
   border: none;
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+  width: auto;
 }
 
-.header__hero--btn:hover {
+.btn:hover {
   cursor: pointer;
 }
+
+.product-image .btn {
+  background-color: #ad4844;
+  margin-inline: auto;
+}
+
 .header__menu {
   position: fixed;
   width: 100%;
@@ -116,7 +123,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 70px;
+  margin-block: 70px;
+}
+.section__title p {
+  font-size: 13px;
+  color: #111111;
 }
 
 .section__title h2 {
@@ -134,7 +145,7 @@ body {
 }
 .section__title-line {
   height: 1px;
-  width: 40%;
+  width: 40px;
   background-color: #111111;
   margin-top: 20px;
 }
@@ -234,6 +245,14 @@ body {
   align-items: center;
 }
 
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 @media (max-width: 767px) {
   .header {
     background-image: url(./images/effectHeaderMobile@1x.png);
@@ -308,8 +327,9 @@ body {
     text-transform: uppercase;
   }
 
-  .header__hero--btn {
+  .btn {
     display: block;
+    width: auto;
   }
 
   .section__title h2 {
@@ -398,4 +418,61 @@ body {
 
 .modal-content .navigation__list-item a.active {
   border-bottom: 1px solid #ffffff;
+}
+
+/**/
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  text-align: center;
+}
+.ingredient-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 300px;
+}
+.product-image {
+  order: 2; /* Przesuwamy .product-image na koniec listy */
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.content__image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.ingredients h3 {
+  font-size: 20px;
+}
+.ingredients p {
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .ingredients {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+  }
+  .product-image {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ingredient-item:nth-child(8) {
+    display: none;
+  }
 }

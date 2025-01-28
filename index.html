@@ -67,7 +67,7 @@
               Arthrohard to dobrze przyswajalny suplement diety w formie syropu,
               stworzony z myślą o zdrowiu stawów Twojego psa lub kota.
             </p>
-            <button class="header__hero--btn">Kup Teraz</button>
+            <button class="btn header__hero--btn">Kup Teraz</button>
           </div>
         </div>
       </div>
@@ -211,34 +211,7 @@
               <div class="section__title-line"></div>
             </div>
             <ul class="effect__list">
-              <li>
-                <div class="number-box"><p>1</p></div>
-                <p>Wsparcie rozwoju chrząstki stawowej</p>
-              </li>
-              <li>
-                <div class="number-box"><p>2</p></div>
-                <p>Działanie chondroprotekcyjne</p>
-              </li>
-              <li>
-                <div class="number-box"><p>3</p></div>
-                <p>Zmniejszenie stanu zapalnego i bólu</p>
-              </li>
-              <li>
-                <div class="number-box"><p>4</p></div>
-                <p>Wzmocnienie stawów</p>
-              </li>
-              <li>
-                <div class="number-box"><p>5</p></div>
-                <p>Ochrona przed mikrourazami</p>
-              </li>
-              <li>
-                <div class="number-box"><p>6</p></div>
-                <p>Regeneracja po urazach i zabiegach ortopedycznych</p>
-              </li>
-              <li>
-                <div class="number-box"><p>7</p></div>
-                <p>Poprawa jakości życia</p>
-              </li>
+              <!-- Elementy <li> zostaną dodane tutaj przez JavaScript -->
             </ul>
           </div>
         </div>
@@ -249,7 +222,57 @@
             <h2>Skład w 5 ml</h2>
             <div class="section__title-line"></div>
           </div>
+          <div class="section__title">
+            <p>Co dają poszczególne składniki:</p>
+            <div class="section__title-line"></div>
+          </div>
+          <div class="ingredients">
+            <div class="product-image">
+              <picture>
+                <source
+                  srcset="
+                    ./images/productDesctop@1x.png 1x,
+                    ./images/productDesctop@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/productMobile@1x.png 1x,
+                    ./images/productMobile@2x.png 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/productMobile@1x.png"
+                  width="290"
+                  height="400"
+                  alt="ArthroHard"
+                />
+              </picture>
+              <button class="btn">Kup Teraz</button>
+            </div>
+          </div>
+         
         </div>
+        <div class="content__image">
+            <picture>
+              <source
+                srcset="./images/dogD@1x.png 1x, ./images/dogD@2x.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/dogM@1x.png 1x, ./images/dogM@2x.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img
+                src="./images/dogM@1x.png"
+                width="320"
+                height="224"
+                alt="ArthroHard"
+              />
+            </picture>
+          </div>
       </section>
     </main>
     <!-- Modal (początkowo ukryty) -->
@@ -276,6 +299,9 @@
     </div>
 
     <!-- Dodaj odwołanie do zewnętrznego pliku JS -->
+
+    <script src="./js/content.js"></script>
+    <script src="./js/listEffects.js"></script>
     <script src="./js/scrollspy.js"></script>
     <script src="./js/modal.js"></script>
   </body>
