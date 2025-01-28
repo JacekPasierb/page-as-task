@@ -253,26 +253,38 @@
               <button class="btn">Kup Teraz</button>
             </div>
           </div>
-         
         </div>
         <div class="content__image">
-            <picture>
-              <source
-                srcset="./images/dogD@1x.png 1x, ./images/dogD@2x.png 2x"
-                media="(min-width: 768px)"
-              />
-              <source
-                srcset="./images/dogM@1x.png 1x, ./images/dogM@2x.png 2x"
-                media="(max-width: 767px)"
-              />
-              <img
-                src="./images/dogM@1x.png"
-                width="320"
-                height="224"
-                alt="ArthroHard"
-              />
-            </picture>
+          <picture>
+            <source
+              srcset="./images/dogD@1x.png 1x, ./images/dogD@2x.png 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./images/dogM@1x.png 1x, ./images/dogM@2x.png 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              src="./images/dogM@1x.png"
+              width="320"
+              height="224"
+              alt="ArthroHard"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container">
+          <div class="controls">
+            <label for="product-count">liczba produktów na stronie</label>
+            <select id="product-count">
+              <option value="10">10</option>
+              <option value="20" selected>20</option>
+              <option value="50">50</option>
+            </select>
           </div>
+          <div class="productsList" id="products"></div>
+        </div>
       </section>
     </main>
     <!-- Modal (początkowo ukryty) -->
@@ -300,6 +312,7 @@
 
     <!-- Dodaj odwołanie do zewnętrznego pliku JS -->
 
+    <script src="./js/products.js"></script>
     <script src="./js/content.js"></script>
     <script src="./js/listEffects.js"></script>
     <script src="./js/scrollspy.js"></script>
