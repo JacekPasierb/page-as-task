@@ -52,15 +52,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const ingredientList = document.querySelector(".ingredients");
 
+  const effectsHTML = `
+    <img src="./images/effects/effect3.png" width="140" height="190" alt="efekt tła" class="effect3" />
+    <img src="./images/effects/effect4.png" width="140" height="190" alt="efekt tła" class="effect4" />
+  `;
+
+  const fragment = document.createDocumentFragment();
   ingredients.forEach((ingredient, index) => {
     const listItem = document.createElement("div");
     listItem.classList.add("ingredient-item");
     let iconElement;
     if (window.innerWidth >= 768) {
-      iconElement = `<div class="icon-circle"></div>`;
+      iconElement = `<div class="icon-circle" role="img" aria-label="${ingredient.name} icon"></div>`;
     } else {
       iconElement = `
-                  <svg width="40px" height="40px">
+                  <svg width="40px" height="40px" role="img" aria-label="${ingredient.name} icon">
                     <use
                       class="mobile-menu--icon-close"
                       href="./images/icons/icons.svg#${ingredient.icon}"
@@ -75,44 +81,54 @@ document.addEventListener("DOMContentLoaded", () => {
               <h3>${ingredient.name}</h3>
               <p>${ingredient.quantity}</p>
               <p>${ingredient.description}</p>
+              ${effectsHTML}
               `;
 
-    ingredientList.appendChild(listItem);
+    fragment.appendChild(listItem);
   });
+  ingredientList.appendChild(fragment);
+
   // Dodatkowo dodajemy event listener, aby dynamicznie dostosować ikonę przy zmianie rozmiaru okna
-  window.addEventListener("resize", () => {
-    const ingredientItems = document.querySelectorAll(".ingredient-item");
+  window.addEventListener(
+    "resize",
+    debounce(() => {
+      const ingredientItems = document.querySelectorAll(".ingredient-item");
+      const isDesktop = window.innerWidth >= 768;
 
-    ingredientItems.forEach((item, index) => {
-      const iconElement =
-        item.querySelector(".icon-circle") || item.querySelector("svg");
+      ingredientItems.forEach((item, index) => {
+        const iconElement = item.querySelector(".icon-circle, svg");
+        const shouldUpdateIcon =
+          (isDesktop && iconElement?.tagName !== "DIV") ||
+          (!isDesktop && iconElement?.tagName !== "SVG");
 
-      if (window.innerWidth >= 768) {
-        if (!iconElement || iconElement.tagName !== "DIV") {
-          // Zmieniamy na div (kółko) na większych ekranach
-          item.innerHTML = `
-            <div class="icon-circle"></div>
-            <h3>${ingredients[index].name}</h3>
-            <p>${ingredients[index].quantity}</p>
-            <p>${ingredients[index].description}</p>
-          `;
+        if (shouldUpdateIcon) {
+          const iconHTML = isDesktop
+            ? `<div class="icon-circle" role="img" aria-label="${ingredients[index].name} icon"></div>`
+            : `<svg width="40px" height="40px" role="img" aria-label="${ingredients[index].name} icon">
+              <use href="./images/icons/icons.svg#${ingredients[index].icon}"></use>
+            </svg>`;
+
+          // Aktualizuj tylko ikonę, zachowując resztę contentu
+          const currentContent = item.innerHTML;
+          item.innerHTML = currentContent.replace(
+            /<div class="icon-circle">.*?<\/div>|<svg.*?<\/svg>/,
+            iconHTML
+          );
         }
-      } else {
-        if (!iconElement || iconElement.tagName !== "SVG") {
-          // Zmieniamy na SVG na mniejszych ekranach
-          item.innerHTML = `
-            <svg width="40px" height="40px">
-              <use
-                class="mobile-menu--icon-close"
-                href="./images/icons/icons.svg#${ingredients[index].icon}"
-              ></use>
-            </svg>
-            <h3>${ingredients[index].name}</h3>
-            <p>${ingredients[index].quantity}</p>
-            <p>${ingredients[index].description}</p>
-          `;
-        }
-      }
-    });
-  });
+      });
+    }, 250)
+  );
 });
+
+// Funkcja debounce do ograniczenia liczby wywołań
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}

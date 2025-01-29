@@ -1,5 +1,7 @@
 const productContainer = document.getElementById("products");
 const productCountSelect = document.getElementById("product-count");
+const popupClose = document.getElementById("popupClose");
+const popupOverlay = document.getElementById("popupOverlay");
 let currentCount = 20;
 let currentPage = 1;
 const apiUrl = "https://brandstestowy.smallhost.pl/api/random";
@@ -26,6 +28,7 @@ function createProduct(product) {
   const productElement = document.createElement("div");
   productElement.classList.add("product");
   productElement.textContent = ` ID: ${product.id}` || `Produkt`;
+  productElement.addEventListener("click", () => openPopup(product));
   return productElement;
 }
 
@@ -50,6 +53,21 @@ productCountSelect.addEventListener("change", () => {
   loadProducts(currentPage, currentCount);
 });
 
+function openPopup(product) {
+  popupContent.innerHTML = `<h2>ID: ${product.id}</h2><p>Nazwa: ${
+    Object.keys(product)[1]
+  }</p><p>Wartość: ${product.text}</p>`;
+  popup.style.display = "block";
+  popupOverlay.style.display = "block";
+}
+
+function closePopup() {
+  popup.style.display = "none";
+  popupOverlay.style.display = "none";
+}
+
+popupClose.addEventListener("click", closePopup);
+popupOverlay.addEventListener("click", closePopup);
 window.addEventListener("scroll", () => {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
     currentPage++;
