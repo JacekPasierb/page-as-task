@@ -25,3 +25,8 @@
 ---
 
 ## 📂 **Struktura Projektu**
+│── /images # Pliki graficzne 
+│── /js # Skrypty JavaScript 
+│── /css # Arkusze stylów 
+│── index.html # Główna strona 
+│── README.md # Opis projektu
