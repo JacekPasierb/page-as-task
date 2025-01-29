@@ -31,5 +31,10 @@
 │── index.html # Główna strona 
 │── README.md # Opis projektu
 
-🌎 Demo Online
+## 🌎 Demo Online
 🔗 <a href="https://arthrohards.netlify.app/">Zobacz na żywo</a>
+
+## 👨‍💻 Autor
+👤 Jacek Pasierb
+📧 jack_byk@o2.pl
+🐙 https://github.com/JacekPasierb
