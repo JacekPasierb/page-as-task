@@ -3,7 +3,7 @@
 > 🌟 **Responsywna strona internetowa dla suplementu ArthroHard dla psów i kotów.**
 
 ## 📸 Podgląd
-![ArthroHard Preview](/images/zrzut.jpg)
+![ArthroHard Preview](./images/screenshot.png)
 
 ---
 
