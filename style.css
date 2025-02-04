@@ -2,9 +2,9 @@
   /* Colors */
   --color-primary: #ad4844;
   --color-secondary: #111111;
-  --color-background: #f6f6f6;
+  --color-background: #F1F1F1;
   --color-white: #ffffff;
-
+ 
   /* Font sizes */
   --font-size-small: 13px;
   --font-size-medium: 20px;
@@ -150,6 +150,7 @@ body {
   position: fixed;
   z-index: 1;
   width: 100%;
+  background-color: #F1F1F1;
 }
 
 .header__content {
@@ -179,6 +180,7 @@ body {
   justify-content: center;
   text-align: center;
   gap: 30px;
+  padding-top: 60px;
 }
 
 .header__hero-text {
@@ -526,7 +528,6 @@ select {
   }
   .header__menu {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: var(--color-white);
   }
   .menu__button {
     display: none;
