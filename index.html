@@ -35,42 +35,33 @@
   </head>
   <body>
     <header class="header" id="header">
-      <div class="header__menu">
-        <div class="header__content container">
-          <a href="#header" class="logo">
-            <span class="logo-overlay">Arthro</span>Hard
-          </a>
-          <button
-            class="menu__button"
-            id="toggleModalButton"
-            aria-label="Otwórz menu"
-          >
-            <img src="./images/menu.png" alt="menu button" />
-          </button>
-          <nav class="navigation" aria-label="Menu główne">
-            <ul class="navigation__list">
-              <li class="navigation__list-item">
-                <a href="#about">Co nas wyróżnia</a>
-              </li>
-              <li class="navigation__list-item">
-                <a href="#content">Skład</a>
-              </li>
-              <li class="navigation__list-item">
-                <a href="#sectionProducts">Produkty</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <div class="container header__content">
+        <a href="#header" class="logo">
+          <span class="logo-overlay">Arthro</span>Hard
+        </a>
+        <button
+          class="menu__button"
+          id="toggleModalButton"
+          aria-label="Otwórz menu"
+        >
+          <img src="./images/menu.png" alt="menu button" />
+        </button>
+        <nav class="navigation" aria-label="Menu główne">
+          <ul class="navigation__list">
+            <li class="navigation__list-item">
+              <a href="#about">Co nas wyróżnia</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="#content">Skład</a>
+            </li>
+            <li class="navigation__list-item"><a href="">Produkty</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="container">
-        <div class="header__hero">
-          <img
-            src="./images/effects/effect7.png"
-            width="140"
-            height="190"
-            alt="efekt tła"
-            class="effect7"
-          />
+    </header>
+    <main>
+      <section class="head">
+        <div class="container head__flex">
           <picture>
             <source
               srcset="
@@ -86,13 +77,14 @@
               "
               media="(max-width: 767px)"
             />
-            <img src="./images/headerMobile@1x.png" alt="Opis obrazu" />
+            <img
+              src="./images/headerMobile@1x.png"
+              alt="Zdjęcie syropu ArthroHard"
+              class="head__img"
+            />
           </picture>
-
-          <div class="header__hero-text">
-            <div class="header__hero-logo">
-              <h1 class="logo"><span class="logo-overlay">Arthro</span>Hard</h1>
-            </div>
+          <div class="head__description">
+            <h1 class="logo"><span class="logo-overlay">Arthro</span>Hard</h1>
             <h2>Lab-V Arthrohard Preparat na wsparcie stawów dla psa i kota</h2>
             <p>
               Arthrohard to dobrze przyswajalny suplement diety w formie syropu,
@@ -106,46 +98,16 @@
             </button>
           </div>
         </div>
-      </div>
-
-      <img
-        src="./images/effects/effect1.png"
-        width="140"
-        height="190"
-        alt="efekt tła"
-        class="effect1"
-      />
-    </header>
-    <main>
+      </section>
       <section class="about" id="about">
-        <img
-          src="./images/effects/effect5.png"
-          width="140"
-          height="190"
-          alt="efekt tła"
-          class="effect5"
-        />
-        <img
-          src="./images/effects/effect6.png"
-          width="140"
-          height="190"
-          alt="efekt tła"
-          class="effect6"
-        />
-        <img
-          src="./images/effects/effect2.png"
-          width="140"
-          height="190"
-          alt="efekt tła"
-          class="effect2"
-        />
 
         <div class="container">
+
           <div class="section__title">
             <h2>Co wyróznia nasz preparat</h2>
             <div class="section__title-line"></div>
           </div>
-          <ul class="about__boxes">
+          <ul class="about__boxes"></ul>
             <li class="about__box">
               <div class="about__box-header">
                 <h3>Innowacyjny dodatek - Czarciego Pazura</h3>
@@ -161,20 +123,6 @@
                 </p>
               </div>
               <div class="about__box-image">
-                <img
-                  src="./images/effects/effect8.png"
-                  width="140"
-                  height="190"
-                  alt=""
-                  class="effect8"
-                />
-                <img
-                  src="./images/effects/effect9.png"
-                  width="140"
-                  height="190"
-                  alt=""
-                  class="effect9"
-                />
                 <picture>
                   <source
                     srcset="
@@ -190,311 +138,25 @@
                     "
                     media="(max-width: 767px)"
                   />
-                  <img src="./images/photoMobile@1x.png" alt="Opis obrazu" />
+                  <img src="./images/photoMobile@1x.png" alt="Fotografia czarciego pazura" />
                 </picture>
               </div>
             </li>
-            <li class="about__box">
-              <img
-                src="./images/effects/effect3.png"
-                width="140"
-                height="190"
-                alt=""
-                class="effect3"
-              />
-              <img
-                src="./images/effects/effect4.png"
-                width="140"
-                height="190"
-                alt=""
-                class="effect4"
-              />
-
-              <div class="about__box-header">
-                <h3>Wygoda - dwa sposoby podawania</h3>
-                <div class="section__title-line"></div>
-              </div>
-              <div class="about__box-body">
-                <ul>
-                  <li>
-                    <div class="number-box"><p>1</p></div>
-                    <p>Bezpośrednio do pyszczka</p>
-                  </li>
-                  <li>
-                    <div class="number-box"><p>2</p></div>
-                    <p>Zmieszany z karmą</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="about__box-image">
-                <img
-                  src="./images/effects/effect10.png"
-                  width="140"
-                  height="190"
-                  alt=""
-                  class="effect10"
-                />
-                <img
-                  src="./images/effects/effect11.png"
-                  width="140"
-                  height="190"
-                  alt=""
-                  class="effect11"
-                />
-                <picture>
-                  <source
-                    srcset="
-                      ./images/photo2Desctop@1x.png 1x,
-                      ./images/photo2Desctop@2x.png 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/photo2Mobile@1x.png 1x,
-                      ./images/photo2Mobile@2x.png 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-                  <img src="./images/photo2Mobile@1x.png" alt="Opis obrazu" />
-                </picture>
-                <picture>
-                  <source
-                    srcset="
-                      ./images/photo3Desctop@1x.png 1x,
-                      ./images/photo3Desctop@2x.png 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/photo3Mobile@1x.png 1x,
-                      ./images/photo3Mobile@2x.png 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-                  <img src="./images/photo3Mobile@1x.png" alt="Opis obrazu" />
-                </picture>
-              </div>
-            </li>
-            <li class="about__box">
-              <img
-                src="./images/effects/effect3.png"
-                width="140"
-                height="190"
-                alt=""
-                class="effect3"
-              />
-              <img
-                src="./images/effects/effect4.png"
-                width="140"
-                height="190"
-                alt=""
-                class="effect4"
-              />
-              <div class="about__box-header">
-                <h3>Skuteczność - skoncentrowana dawka</h3>
-                <div class="section__title-line"></div>
-              </div>
-              <div class="about__box-body">
-                <p><b>Tylko jedna porcja dziennie.</b></p>
-                <p>
-                  To nie tylko wygoda, ale również gwarancja, że Twoje zwierzę
-                  otrzymuje wszystko, czego potrzebuje, aby cieszyć się zdrowiem
-                  i aktywnością na długo. Skorzystaj z zalet Arthrohard i zobacz
-                  różnicę w komforcie życia swojego zwierzęcia.
-                </p>
-              </div>
-              <div class="about__box-image">
-                <img
-                  src="./images/effects/effect12.png"
-                  width="140"
-                  height="190"
-                  alt=""
-                  class="effect12"
-                />
-                <img
-                  src="./images/effects/effect13.png"
-                  width="140"
-                  height="190"
-                  alt=""
-                  class="effect13"
-                />
-                <picture>
-                  <source
-                    srcset="
-                      ./images/photo4Desctop@1x.png 1x,
-                      ./images/photo4Desctop@2x.png 2x
-                    "
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/photo4Mobile@1x.png 1x,
-                      ./images/photo4Mobile@2x.png 2x
-                    "
-                    media="(max-width: 767px)"
-                  />
-                  <img src="./images/photo4Mobile@1x.png" alt="Opis obrazu" />
-                </picture>
-              </div>
-            </li>
+           
           </ul>
-        </div>
-      </section>
-      <section class="effect" id="effect">
-        <img
-          src="./images/effects/effect3.png"
-          width="140"
-          height="190"
-          alt="efekt tła"
-          class="effect3"
-        />
-        <img
-          src="./images/effects/effect4.png"
-          width="140"
-          height="190"
-          alt="efekt tła"
-          class="effect4"
-        />
-        <div class="container">
-          <div class="effect__content">
-            <div class="section__title">
-              <h2>Działanie Preparatu</h2>
-              <div class="section__title-line"></div>
-            </div>
-            <ul class="effect__list">
-              <!-- Elementy <li> zostaną dodane tutaj przez JavaScript -->
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="content" id="content">
-        <img
-          src="./images/effects/effect3.png"
-          width="140"
-          height="190"
-          alt="efekt tła"
-          class="effect3"
-        />
-        <img
-          src="./images/effects/effect4.png"
-          width="140"
-          height="190"
-          alt="efekt tła"
-          class="effect4"
-        />
-        <div class="container">
-          <div class="section__title">
-            <h2>Skład w 5 ml</h2>
-            <div class="section__title-line"></div>
-          </div>
-          <div class="section__title">
-            <p>Co dają poszczególne składniki:</p>
-            <div class="section__title-line"></div>
-          </div>
-          <div class="ingredients">
-            <div class="product-image">
-              <img
-                src="./images/effects/effect14.png"
-                width="140"
-                height="190"
-                alt="efekt tła"
-                class="effect14"
-              />
-              <img
-                src="./images/effects/effect15.png"
-                width="140"
-                height="190"
-                alt="efekt tła"
-                class="effect15"
-              />
-              <picture>
-                <source
-                  srcset="
-                    ./images/productDesctop@1x.png 1x,
-                    ./images/productDesctop@2x.png 2x
-                  "
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="
-                    ./images/productMobile@1x.png 1x,
-                    ./images/productMobile@2x.png 2x
-                  "
-                  media="(max-width: 767px)"
-                />
-                <img
-                  src="./images/productMobile@1x.png"
-                  width="290"
-                  height="400"
-                  alt="ArthroHard"
-                />
-              </picture>
-              <button class="btn">Kup Teraz</button>
-            </div>
-          </div>
-        </div>
-        <div class="content__image">
-          <img
-            src="./images/effects/effect16.png"
-            width="140"
-            height="190"
-            alt="efekt tła"
-            class="effect16"
-          />
-          <img
-            src="./images/effects/effect17.png"
-            width="140"
-            height="190"
-            alt="efekt tła"
-            class="effect17"
-          />
-          <picture>
-            <source
-              srcset="./images/dogD@1x.png 1x, ./images/dogD@2x.png 2x"
-              media="(min-width: 768px)"
-            />
-            <source
-              srcset="./images/dogM@1x.png 1x, ./images/dogM@2x.png 2x"
-              media="(max-width: 767px)"
-            />
-            <img
-              src="./images/dogM@1x.png"
-              width="320"
-              height="224"
-              alt="ArthroHard"
-            />
-          </picture>
-        </div>
-      </section>
-      <section class="products" id="sectionProducts">
-        <div class="container">
-          <div class="controls">
-            <label for="product-count">liczba produktów na stronie</label>
-            <select
-              id="product-count"
-              aria-label="Wybierz liczbę produktów na stronie"
-            >
-              <option value="10">10</option>
-              <option value="20" selected>20</option>
-              <option value="50">50</option>
-            </select>
-          </div>
-          <div class="productsList" id="products"></div>
         </div>
       </section>
     </main>
 
     <!-- POPUP -->
 
-    <div class="popup-overlay" id="popupOverlay"></div>
+    <!-- <div class="popup-overlay" id="popupOverlay"></div>
     <div class="popup" id="popup">
       <span class="popup-close" id="popupClose">&times;</span>
       <div id="popupContent">Szczegóły produktu</div>
-    </div>
+    </div> -->
     <!-- MODAL MENU -->
-    <div id="myModal" class="modal">
+    <!-- <div id="myModal" class="modal">
       <div class="container">
         <div class="modal-content">
           <nav class="navigation" aria-label="Menu mobilne">
@@ -514,7 +176,7 @@
           </nav>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <script src="./js/products.js"></script>
     <script src="./js/content.js"></script>
