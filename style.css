@@ -191,6 +191,11 @@ body {
   color: transparent;
 }
 
+.section__title p {
+  color: #111111;
+  font-size: 13px;
+}
+
 .section__title-line {
   height: 1px;
   width: 40px;
@@ -213,6 +218,12 @@ body {
   text-align: center;
 
   flex: 1 1 calc(33.33% - 20px);
+  padding-bottom: 20px;
+  transition: all 0.5s ease-in;
+}
+
+.about__box:hover {
+  border-bottom: 1px solid #111111;
 }
 
 .about__box-header {
@@ -266,6 +277,161 @@ body {
   flex-direction: row;
   gap: 20px;
 }
+
+.effect {
+  padding-top: 70px;
+  padding-bottom: 29px;
+  background-color: var(--color-white);
+}
+
+.effect__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.effect__list {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-bottom: 46px;
+}
+
+.effect__list .number-box p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.effect__list li {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+}
+
+.content {
+  margin-top: 17px;
+  padding-top: 70px;
+  background-color: var(--color-white);
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  text-align: center;
+}
+.ingredient-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+.ingredient-item h3 {
+ font-size: 20px;
+}
+.ingredient-item p {
+ font-size: 13px;
+}
+
+
+.product-image {
+  order: 2; /* Przesuwamy .product-image na koniec listy */
+  position: relative;
+  z-index: 2;
+}
+
+.product-image .background-effects {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: unset;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Zapobiega interakcjom */
+  z-index: -1; /* Umieszcza tło za butelką */
+}
+
+.effect14 {
+  position: absolute;
+  opacity: 0.8; /* Opcjonalna przezroczystość */
+  top: -40px;
+  left: -20px;
+  width: 120px;
+}
+
+.effect15 {
+  position: absolute;
+  opacity: 0.8; /* Opcjonalna przezroczystość */
+  bottom: -30px;
+  right: -10px;
+  width: 130px;
+}
+
+.product-image .productImage{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.content__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+.product-image .btn {
+  background-color: #ad4844;
+  margin-inline: auto;
+  font-weight: bold;
+}
+
+.ingredient-item .icon-circle {
+  display: none;
+}
+
+.background-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Zapobiega interakcjom z elementami */
+  z-index: 1;
+}
+
+.effect3 {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 80px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.effect4 {
+  position: absolute;
+ top: 20px;
+  right: -10px;
+  width: 90px;
+  height: auto;
+  opacity: 0.8;
+}
+
+
 
 @media (max-width: 767px) {
   .header__content {
@@ -338,6 +504,10 @@ body {
     font-size: 48px;
   }
 
+  .section__title p {
+    font-size: 31px;
+  }
+
   .section__title-line {
     width: 126px;
   }
@@ -353,6 +523,7 @@ body {
     justify-content: space-between;
     max-width: 420px;
     margin: 0 auto;
+    padding-bottom: 24px;
   }
 
   .about__box-header {
@@ -388,6 +559,48 @@ body {
     /* max-width: 100%; */
     border-radius: 8px;
   }
+
+  .effect,
+  .effect3,
+  .effect4 {
+    display: none;
+  }
+
+  .ingredients {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+   
+    text-align: left;
+  }
+
+  .ingredient-item {
+   text-align: center;
+  }
+  .product-image {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ingredient-item:nth-child(8) {
+    display: none;
+  }
+  .ingredient-item .icon-circle {
+    display: block;
+  }
+  .ingredient-item svg {
+    display: none;
+  }
+  .ingredient-item:last-child {
+    display: none;
+  }
+  .product-image .background-effects {
+    display: block;
+
+  }
+ 
 }
 
 @media (min-width: 1200px) {
@@ -406,4 +619,11 @@ body {
   .head .logo {
     font-size: 90px;
   }
+
+  .ingredient-item h3 {
+    font-size: 31px;
+   }
+   .ingredient-item p {
+    font-size: 20px;
+   }
 }
