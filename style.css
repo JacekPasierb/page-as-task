@@ -316,8 +316,8 @@ body {
 }
 
 .icon-circle {
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   background-color: #d9d9d9;
   border-radius: 50%;
   display: inline-block;
@@ -328,6 +328,7 @@ body {
   flex-direction: column;
   gap: 70px;
   text-align: center;
+  align-items: center;
 }
 .ingredient-item {
   display: flex;
@@ -337,12 +338,11 @@ body {
   position: relative;
 }
 .ingredient-item h3 {
- font-size: 20px;
+  font-size: 20px;
 }
 .ingredient-item p {
- font-size: 13px;
+  font-size: 13px;
 }
-
 
 .product-image {
   order: 2; /* Przesuwamy .product-image na koniec listy */
@@ -350,8 +350,13 @@ body {
   z-index: 2;
 }
 
+.imo {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+
 .product-image .background-effects {
-  display: none;
   position: absolute;
   width: 100%;
   height: unset;
@@ -362,36 +367,93 @@ body {
   z-index: -1; /* Umieszcza tło za butelką */
 }
 
-.effect14 {
+.content__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.content__image .background-effects {
   position: absolute;
-  opacity: 0.8; /* Opcjonalna przezroczystość */
-  top: -40px;
-  left: -20px;
-  width: 120px;
+  width: 100%;
+  height: unset;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Zapobiega interakcjom */
+  z-index: -1;
+}
+
+.effect14 {
+  display: none;
+  position: absolute;
+  top: -150px;
+  left: -40px;
+  width: 180px;
 }
 
 .effect15 {
+  display: none;
   position: absolute;
-  opacity: 0.8; /* Opcjonalna przezroczystość */
+  bottom: -100px;
+  right: -44px;
+  width: 146px;
+}
+.effect18 {
+  position: absolute;
+  top: -100px;
+  left: -20px;
+  width: 111px;
+}
+.effect19 {
+  position: absolute;
   bottom: -30px;
   right: -10px;
-  width: 130px;
+  width: 89px;
+}
+.content__image .effect20 {
+  position: absolute;
+  top: -15px;
+  left: 27px;
+  width: 79px;
 }
 
-.product-image .productImage{
-  width: 100%;
-  height: auto;
+.content__image .effect23 {
+  display: none;
+  position: absolute;
+  bottom: -220px;
+  right: 80px;
+  width: 175px;
+}
+
+.content__image .effect22 {
+  display: none;
+  position: absolute;
+  top: -50px;
+  left: 135px;
+  width: 175px;
+}
+
+.content__image .effect21 {
+  position: absolute;
+  bottom: -110px;
+  right: 0px;
+  width: 79px;
+}
+
+.product-image .productImage {
   max-width: 100%;
-}
-
-.content__image img {
+  height: auto;
   display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
 }
 
-
+.dogImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
 .product-image .btn {
   background-color: #ad4844;
@@ -417,21 +479,19 @@ body {
   position: absolute;
   top: 0;
   left: -10px;
-  width: 80px;
+  width: 53px;
   height: auto;
   opacity: 0.8;
 }
 
 .effect4 {
   position: absolute;
- top: 20px;
+  top: 20px;
   right: -10px;
-  width: 90px;
+  width: 53px;
   height: auto;
   opacity: 0.8;
 }
-
-
 
 @media (max-width: 767px) {
   .header__content {
@@ -570,12 +630,12 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-   
+    align-items: unset;
     text-align: left;
   }
 
   .ingredient-item {
-   text-align: center;
+    text-align: center;
   }
   .product-image {
     grid-column: 2;
@@ -596,11 +656,21 @@ body {
   .ingredient-item:last-child {
     display: none;
   }
-  .product-image .background-effects {
+  .effect14,
+  .effect15 {
     display: block;
-
   }
- 
+  .effect18,
+  .effect19,
+  .content__image .effect20,
+  .content__image .effect21 {
+    display: none;
+  }
+
+  .content__image .effect22,
+  .content__image .effect23 {
+    display: block;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -622,8 +692,8 @@ body {
 
   .ingredient-item h3 {
     font-size: 31px;
-   }
-   .ingredient-item p {
+  }
+  .ingredient-item p {
     font-size: 20px;
-   }
+  }
 }
