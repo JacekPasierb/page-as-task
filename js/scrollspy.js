@@ -1,13 +1,15 @@
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      const link = document.querySelector(`a[href="#${entry.target.id}"]`);
+      const links = document.querySelectorAll(`a[href="#${entry.target.id}"]`);
 
-      if (entry.isIntersecting) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
+      links.forEach((link) => {
+        if (entry.isIntersecting) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
     });
   },
   {
