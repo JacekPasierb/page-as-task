@@ -785,7 +785,7 @@ select {
 
   min-height: 300px;
 
-  display: flex;
+ 
   flex-direction: column;
   justify-content: space-between;
 }
@@ -794,8 +794,8 @@ select {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Równy rozkład tekstów */
-  height: 100%; /* Zajmuje całą dostępną wysokość */
+  justify-content: space-between;
+  height: 100%; 
   width: 100%;
 }
 
