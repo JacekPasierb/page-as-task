@@ -64,7 +64,7 @@ const openPopup = (product) => {
   popupContent.innerHTML = `<p>ID: ${product.id}</p><p>Nazwa: ${
     Object.keys(product)[1]
   }</p><p>Wartość: ${product.text}</p>`;
-  popup.style.display = "block";
+  popup.style.display = "flex";
   popupOverlay.style.display = "block";
 };
 
