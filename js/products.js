@@ -34,7 +34,7 @@ const createProduct = (product) => {
   const productText = document.createElement("p");
   productText.textContent = product.id ? `ID: ${product.id}` : "Produkt";
   productElement.appendChild(productText);
-  
+
   productElement.addEventListener("click", () => openPopup(product));
   return productElement;
 };
@@ -61,7 +61,7 @@ productCountSelect.addEventListener("change", () => {
 });
 
 const openPopup = (product) => {
-  popupContent.innerHTML = `<h2>ID: ${product.id}</h2><p>Nazwa: ${
+  popupContent.innerHTML = `<p>ID: ${product.id}</p><p>Nazwa: ${
     Object.keys(product)[1]
   }</p><p>Wartość: ${product.text}</p>`;
   popup.style.display = "block";

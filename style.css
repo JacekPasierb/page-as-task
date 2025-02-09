@@ -782,6 +782,12 @@ select {
   min-width: 300px;
 }
 
+
+.popup p {
+  font-size: 31px;
+  color: #000;
+}
+
 .popup-close {
   position: absolute;
   top: 10px;
