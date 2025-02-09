@@ -29,8 +29,12 @@ const fetchProducts = async (pageNumber, pageSize) => {
 
 const createProduct = (product) => {
   const productElement = document.createElement("div");
+
   productElement.classList.add("product");
-  productElement.textContent = ` ID: ${product.id}` || `Produkt`;
+  const productText = document.createElement("p");
+  productText.textContent = product.id ? `ID: ${product.id}` : "Produkt";
+  productElement.appendChild(productText);
+  
   productElement.addEventListener("click", () => openPopup(product));
   return productElement;
 };
