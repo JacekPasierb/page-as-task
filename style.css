@@ -431,14 +431,28 @@ body {
 
   flex: 1 1 calc(33.33% - 20px);
   padding-bottom: 20px;
-  transition: all 0.5s ease-in;
 
   position: relative;
 }
 
-.about__box:hover {
-  border-bottom: 1px solid #111111;
+.about__box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: transparent;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  transform: translateX(-50%);
 }
+
+.about__box:hover::after {
+  width: 100%;
+  background-color: #111111;
+}
+
+
 
 .about__box-header {
   display: flex;
