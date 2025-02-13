@@ -553,6 +553,7 @@ body {
   padding-top: 70px;
   background-color: var(--color-white);
   position: relative;
+  overflow: hidden;
 }
 
 .ingredients {
@@ -661,6 +662,8 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
 }
 
 /* ====================================================================================================================
