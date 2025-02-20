@@ -314,14 +314,7 @@ body {
   color: var(--color-secondary);
 }
 
-.menu__button {
-  background-color: transparent;
-  border: none;
-}
 
-.menu__button:hover {
-  cursor: pointer;
-}
 
 .navigation {
   display: none;
@@ -738,7 +731,7 @@ select {
   .modal {
     display: none;
     position: fixed;
-    z-index: 5;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -843,6 +836,16 @@ select {
 
   .productsList {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu__button {
+    background-color: transparent;
+    border: none;
+  
+  }
+  
+  .menu__button:hover {
+    cursor: pointer;
   }
 }
 
